@@ -63,3 +63,27 @@ const navLinks = document.querySelector('.nav-links');
 burgerMenu.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
+
+document.querySelectorAll('.parallax-card').forEach(card => {
+    const edgeThreshold = 0.1;
+    card.addEventListener('mousemove', (e) => {
+        let x = e.offsetX;
+        let y = e.offsetY;
+        let CardWidth = card.clientWidth;
+        let CardHeight = card.clientHeight;
+
+        const inEdgeX = x < CardWidth * edgeThreshold || x > CardWidth * (1 - edgeThreshold);
+        const inEdgeY = y < CardHeight * edgeThreshold || y > CardHeight * (1 - edgeThreshold * 3);
+
+        if (inEdgeX || inEdgeY) {
+            card.style.transform = '';
+        } else {
+            let transX = (x - CardWidth/2) * 0.2;
+            let transY = (y - CardHeight/2) * 0.2;
+            card.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
+        }
+    });
+    card.addEventListener("mouseout", (e) => {
+        card.style.transform = '';
+    })
+});

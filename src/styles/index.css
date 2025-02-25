@@ -61,6 +61,11 @@ body {
     padding: 50px 40px;
 }
 
+.parallax-card {
+    transition: transform 0.2s;
+    position: relative;
+}
+
 a {
     text-decoration: none;
 }
