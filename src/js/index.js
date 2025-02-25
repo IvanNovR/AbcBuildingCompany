@@ -56,3 +56,10 @@ let observer = new IntersectionObserver(startAnimation, { threshold: 0.5 });
 document.querySelectorAll(".animated-value").forEach(block => {
     observer.observe(block);
 });
+
+const burgerMenu = document.getElementById('burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
