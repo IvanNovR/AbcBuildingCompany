@@ -30,8 +30,7 @@ function animateValue(element, start, end, duration) {
     function step(timestamp) {
         if (!startTime) startTime = timestamp;
         let progress = timestamp - startTime;
-        let current = Math.min(Math.round(start + (end - start) * (progress / duration)), end);
-        element.textContent = current;
+        element.textContent = Math.min(Math.round(start + (end - start) * (progress / duration)), end);
         if (progress < duration) {
             requestAnimationFrame(step);
         }
@@ -83,7 +82,7 @@ document.querySelectorAll('.parallax-card').forEach(card => {
             card.style.transform = `translateX(${transX}px) translateY(${transY}px)`;
         }
     });
-    card.addEventListener("mouseout", (e) => {
+    card.addEventListener("mouseout", () => {
         card.style.transform = '';
     })
 });
