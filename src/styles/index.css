@@ -12,6 +12,10 @@
     --accent: #5C6FFF;
 }
 
+html {
+    scroll-padding-top: 100px;
+}
+
 body {
     overflow-x: hidden;
     margin: 0;
