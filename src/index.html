@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="styles/index.css">
         <title>ABC Company</title>
     </head>
     <body>
@@ -30,10 +30,10 @@
             </div>
         </header>
         <main>
-            <section class="hero section">
+            <section class="home section">
                 <div class="accent-block"></div>
-                <img src="../public/img/hero-img.webp" loading="lazy" alt="Hero Image" class="hero-image">
-                <div class="mx-auto hero-content">
+                <img src="../public/img/home-img.webp" loading="lazy" alt="home Image" class="home-image">
+                <div class="mx-auto home-content">
                     <h1 class="color-white">ABC Company</h1>
                     <p class="mg-top-20 color-white">
                         Основные направления деятельности<br>
@@ -53,12 +53,12 @@
                         <div class="stat-block color-white">
                             <h3 class="mg-top-40">Ваш надежный партнер<br>в мире строительства</h3>
                         </div>
-                        <div class="stat-block color-white">
-                            <h3 class="mg-top-40">15 лет</h3>
+                        <div class="stat-block animated-value color-white">
+                            <h3 class="mg-top-40" data-value="15">0</h3>
                             <h5>Опыт работы</h5>
                         </div>
-                        <div class="stat-block color-white">
-                            <h3 class="mg-top-40">630</h3>
+                        <div class="stat-block animated-value color-white">
+                            <h3 class="mg-top-40" data-value="630">0</h3>
                             <h5>Проектов</h5>
                         </div>
                     </div>
@@ -76,9 +76,9 @@
                                 на рынке<br>
                             </p>
                         </div>
-                        <img class="border-radius-30" src="../public/img/about-us-img.webp" loading="lazy" alt="About As Image">
+                        <img class="parallax border-radius-30" src="../public/img/about-us-img.webp" loading="lazy" alt="About As Image">
                     </div>
-                    <div class="about-us-content color-black">
+                    <div class="parallax-reverse about-us-content color-black">
                         <h1>ABC Company</h1>
                         <p class="mg-top-20">
                             Добро пожаловать в "ABC Company" – вашу
@@ -130,24 +130,24 @@
                 <div class="mx-auto projects-container color-black">
                     <h2>Наши проекты</h2>
                     <h6>За 30 лет нашей компанией спроектировано и построено более 680 объектов</h6>
-                    <div class="projects-slider mg-top-40">
-                        <div class="slider-container">
-                            <div class="slide">
-                                <img class="border-radius-30" src="../public/img/projects-chernigovskiy.webp" loading="lazy" alt="Chernigovskiy">
-                            </div>
-                            <div class="slide">
-                                <img class="border-radius-30" src="../public/img/projects-levoberezhniy.webp" loading="lazy" alt="Levoberezhniy">
-                            </div>
-                            <div class="slide">
-                                <img class="border-radius-30" src="../public/img/projects-gribnoy-canal.webp" loading="lazy" alt="Gribnoy Canal">
-                            </div>
+                    <div class="projects-list mg-top-40">
+                        <div class="project-image active">
+                            <img src="../public/img/projects-levoberezhniy.webp" loading="lazy" alt="Levoberezhniy">
+                            <div class="overlay"><h4>ЖК «Левобережный»</h4></div>
+                        </div>
+                        <div class="project-image">
+                            <img src="../public/img/projects-chernigovskiy.webp" loading="lazy" alt="Chernigovskiy">
+                            <div class="overlay"><h4>ЖК «Черниговский»</h4></div>
+                        </div>
+                        <div class="project-image">
+                            <img src="../public/img/projects-gribnoy-canal.webp" loading="lazy" alt="Gribnoy Canal">
+                            <div class="overlay"><h4>ЖК «Грибной Канал»</h4></div>
                         </div>
                     </div>
-                    <button class="slider-btn slider-prev">←</button>
-                    <button class="slider-btn slider-next">→</button>
                 </div>
             </section>
             <section id="contacts" class="contacts section">
+                <div class="contact-container-bg"></div>
                 <div class="mx-auto contact-container">
                     <h4 class="color-white">У Вас есть вопросы? Задайте их нашему специалисту!</h4>
                 </div>
@@ -177,18 +177,18 @@
             <div class="mx-auto footer-content">
                 <h5 class="color-white">© Все права защищены</h5>
                 <div class="social-links">
-                    <a href="#" target="_blank" rel="noopener">
+                    <a href="https://x.com/" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/></svg>
                     </a>
-                    <a href="#" target="_blank" rel="noopener">
+                    <a href="https://facebook.com/" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12.001 2.002c-5.522 0-9.999 4.477-9.999 9.999 0 4.99 3.656 9.126 8.437 9.879v-6.988h-2.54v-2.891h2.54V9.798c0-2.508 1.493-3.891 3.776-3.891 1.094 0 2.24.195 2.24.195v2.459h-1.264c-1.24 0-1.628.772-1.628 1.563v1.875h2.771l-.443 2.891h-2.328v6.988C18.344 21.129 22 16.992 22 12.001c0-5.522-4.477-9.999-9.999-9.999Z"/></svg>
                     </a>
-                    <a href="#" target="_blank" rel="noopener">
+                    <a href="https://www.instagram.com/" target="_blank" rel="noopener">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8Zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881Z"/></svg>
                     </a>
                 </div>
             </div>
         </footer>
-        <script src="index.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
